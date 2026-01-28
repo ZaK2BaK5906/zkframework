@@ -50,3 +50,10 @@ RegisterNUICallback('close', function(_, cb)
   closeCreator()
   cb({ ok = true })
 end)
+
+AddEventHandler('onResourceStop', function(resource)
+  if resource ~= GetCurrentResourceName() then
+    return
+  end
+  closeCreator()
+end)

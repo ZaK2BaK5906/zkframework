@@ -4,6 +4,25 @@ ZK.Callbacks = ZK.Callbacks or {}
 local callbackHandlers = {}
 local pendingRequests = {}
 
+local function resetNuiFocus()
+  SetNuiFocus(false, false)
+  SetNuiFocusKeepInput(false)
+end
+
+AddEventHandler('onResourceStart', function(resource)
+  if resource ~= GetCurrentResourceName() then
+    return
+  end
+  resetNuiFocus()
+end)
+
+AddEventHandler('onResourceStop', function(resource)
+  if resource ~= GetCurrentResourceName() then
+    return
+  end
+  resetNuiFocus()
+end)
+
 local function registerCallback(name, handler)
   callbackHandlers[name] = handler
 end

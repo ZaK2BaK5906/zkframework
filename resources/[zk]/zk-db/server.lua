@@ -46,10 +46,9 @@ local function runMigrations()
   ensureMigrationsTable()
 
   local migrations = {
-    {
-      name = '001_init.sql',
-      file = 'migrations/001_init.sql',
-    },
+    { name = '001_users.sql', file = 'migrations/001_users.sql' },
+    { name = '002_characters.sql', file = 'migrations/002_characters.sql' },
+    { name = '003_schema_migrations.sql', file = 'migrations/003_schema_migrations.sql' },
   }
 
   for _, migration in ipairs(migrations) do

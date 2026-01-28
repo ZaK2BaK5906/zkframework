@@ -9,7 +9,9 @@
 ## Création de la base
 1. Créez une base `zk_framework`.
 2. Importez la migration :
-   - `sql/001_init.sql`
+   - `sql/001_users.sql`
+   - `sql/002_characters.sql`
+   - `sql/003_schema_migrations.sql`
 
 ## Installation des ressources
 1. Copiez `resources/[zk]` dans le dossier `resources/` de votre FXServer (pas de ZIP binaire).

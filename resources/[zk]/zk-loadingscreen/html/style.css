@@ -1,0 +1,101 @@
+:root {
+  color-scheme: dark;
+  font-family: "Inter", "Segoe UI", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  background: radial-gradient(circle at top, #101827, #05070d 65%);
+  color: #e6eefc;
+  overflow: hidden;
+}
+
+.screen {
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.glow {
+  position: absolute;
+  width: 540px;
+  height: 540px;
+  background: radial-gradient(circle, rgba(92, 166, 255, 0.25), transparent 70%);
+  filter: blur(10px);
+}
+
+.content {
+  position: relative;
+  width: min(680px, 90%);
+  padding: 48px;
+  background: rgba(8, 12, 20, 0.78);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  box-shadow: 0 35px 120px rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(18px);
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.logo {
+  display: grid;
+  place-items: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 18px;
+  background: linear-gradient(140deg, #5ca6ff, #7d5dff);
+  font-weight: 700;
+  font-size: 22px;
+}
+
+.title h1 {
+  font-size: 32px;
+  letter-spacing: 0.4px;
+}
+
+.title p {
+  opacity: 0.75;
+  margin-top: 4px;
+}
+
+.status {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.bar {
+  height: 8px;
+  width: 100%;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+}
+
+.fill {
+  display: block;
+  height: 100%;
+  width: 10%;
+  background: linear-gradient(90deg, #5ca6ff, #7d5dff);
+  transition: width 0.4s ease;
+}
+
+footer {
+  font-size: 12px;
+  opacity: 0.6;
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ZK Identity</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app" class="hidden">
+    <div class="panel">
+      <header>
+        <h1>Créer votre identité</h1>
+        <p>Bienvenue sur ZK Framework 2026</p>
+      </header>
+      <form id="identity-form">
+        <label>
+          <span>Prénom</span>
+          <input name="first_name" type="text" minlength="2" maxlength="24" required />
+        </label>
+        <label>
+          <span>Nom</span>
+          <input name="last_name" type="text" minlength="2" maxlength="24" required />
+        </label>
+        <label>
+          <span>Date de naissance (optionnelle)</span>
+          <input name="dob" type="date" />
+        </label>
+        <button type="submit">Valider</button>
+      </form>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

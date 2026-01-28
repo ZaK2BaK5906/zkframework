@@ -29,6 +29,10 @@ RegisterNetEvent('zk:playerReady', function()
   end)
 end)
 
+RegisterNetEvent('zk:characterLoaded', function()
+  closeCreator()
+end)
+
 RegisterNetEvent('zk-identity:notify', function(message)
   TriggerEvent('chat:addMessage', { args = { 'ZK', message } })
 end)

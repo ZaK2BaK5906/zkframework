@@ -6,6 +6,7 @@ local function openCreator()
   end
   isOpen = true
   SetNuiFocus(true, true)
+  SetCursorLocation(0.5, 0.5)
   SendNUIMessage({ action = 'open' })
   TriggerServerEvent('zk-identity:enterCreator')
 end
@@ -16,6 +17,7 @@ local function closeCreator()
   end
   isOpen = false
   SetNuiFocus(false, false)
+  SetCursorLocation(0.5, 0.5)
   SendNUIMessage({ action = 'close' })
 end
 

@@ -1,6 +1,10 @@
 :root {
   font-family: "Inter", "Segoe UI", sans-serif;
   color-scheme: dark;
+  --zk-bg: rgba(12, 18, 32, 0.95);
+  --zk-panel: rgba(255, 255, 255, 0.08);
+  --zk-accent: linear-gradient(135deg, #5ca6ff, #7d5dff);
+  --zk-text-muted: rgba(230, 238, 252, 0.65);
 }
 
 body {
@@ -16,8 +20,8 @@ body {
   width: 240px;
   padding: 16px;
   border-radius: 18px;
-  background: rgba(10, 14, 26, 0.9);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: var(--zk-bg);
+  border: 1px solid var(--zk-panel);
   box-shadow: 0 18px 60px rgba(0, 0, 0, 0.5);
 }
 
@@ -29,7 +33,7 @@ body {
   font-size: 12px;
   letter-spacing: 2px;
   text-transform: uppercase;
-  opacity: 0.6;
+  color: var(--zk-text-muted);
   margin-bottom: 12px;
 }
 
@@ -40,7 +44,7 @@ body {
   padding: 10px 12px;
   border-radius: 12px;
   margin-bottom: 8px;
-  background: rgba(255, 255, 255, 0.04);
+  background: rgba(255, 255, 255, 0.05);
   cursor: pointer;
 }
 
@@ -54,7 +58,7 @@ body {
   border-radius: 8px;
   display: grid;
   place-items: center;
-  background: rgba(125, 93, 255, 0.2);
+  background: rgba(92, 166, 255, 0.2);
 }
 
 .label {
